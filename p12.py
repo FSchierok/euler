@@ -18,13 +18,15 @@ def numDiv(n):
 def numDiv2(n):
     prims = [2, 3, 5, 7, 11, 13, 17, 19]
     exp = list()
-    i = 1
     for prim in prims:
+        i = 0
         if n % prim**i == 0:
             i += 1
         else:
             exp.append(i - 1)
     return("??")
+# Binom: n über i ist anzahl um i aus n zu ziehen
+# summe der Eponenten für alle Teiler aus einer Primzahl, + Binom von zahl der Primzahlen über 1-Zahl + Mischterme mit potenzen
 
 
 TRI = triangle()
