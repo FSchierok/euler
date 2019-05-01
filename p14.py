@@ -1,21 +1,6 @@
-import numpy as np
-from progressbar import ProgressBar
-Bar = ProgressBar()
-res = list()
+import math as m
 
+def route(n,m_):
+    return m.factorial(n+m_)/(m.factorial(n)*m.factorial(m_))
 
-def seq(n):
-    if n % 2 == 0:
-        return n / 2
-    else:
-        return 3 * n + 1
-
-
-for i in Bar(range(1, 1000000)):
-    count = 0
-    n = i
-    while(n != 1):
-        n = seq(n)
-        count += 1
-    res.append(count)
-print(np.argmax(np.array(res)))
+print(route(20,20))
